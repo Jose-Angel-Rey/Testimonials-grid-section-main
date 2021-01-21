@@ -10,4 +10,7 @@ Thanks for checking out this front-end coding challenge.
 
 My Challengue solution:
 
-Contact: dev.joseangel.rey@gmail.com
+💡 My challengue solution 👉🏼 https://testimonials-grid-section-main-git-main.jose-angel-rey.vercel.app/  👈🏼
+
+
+👨🏼‍💻 Contact: dev.joseangel.rey@gmail.com

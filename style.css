@@ -1,0 +1,272 @@
+/* Coded by: Jose Angel Rey
+Github: https://github.com/Jose-Angel-Rey
+Gmail: dev.joseangel.rey@gmail.com */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.attribution {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  margin: -20px auto 30px auto;
+  font-size: 13px;
+  text-align: center;
+  cursor: pointer;
+  color: #555555;
+}
+.attribution a {
+  color: #555555;
+  transition: all 1s;
+}
+.attribution a:hover{
+color: #891cd1;
+}
+.attribution a:active{
+  color: #6403a5;
+}
+body{
+  background-color: hsl(210, 46%, 95%);
+  color: #ffffff;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.grid-container{
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  margin: 70px auto;
+  width: 85%;
+  max-width: 325px;
+  display: grid;
+  gap: 25px;
+}
+
+.grid-item{
+  border-radius: 15px;
+  padding: 20px 35px 35px 35px;
+  transition: all 1s;
+  cursor: pointer;
+}
+.grid-item:hover{
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, .35);
+  transform: scale(1.01);
+}
+.header-card{
+  font-size: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.header-card__img{
+  border-radius: 50%;
+  width: 15%;
+  height: 50%;
+  margin-right: 15px;
+}
+.header-card__title{
+  font-size: 13px;
+  font-weight: 500;
+}
+.header-card__title--profile-status{
+  display: block;
+  color: hsla(0, 0%, 81%, .5);
+  font-size: 11px;
+}
+.content-card__sub-title{
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 1.1rem;
+  line-height: 25px;
+  padding: 20px 0px;
+  font-weight: 600;
+  transition: all 500ms;
+  animation: scale 2s 1s alternate infinite;
+}
+@keyframes scale{
+  from{
+    transform: scale(1);
+    color: rgba(255, 255, 255, 0.35);
+  }
+  to{
+    transform: scale(1.01);
+  }
+}
+.card-content__info{
+  color: hsla(0, 0%, 81%, .7);
+  line-height: 23px;
+  font-size: 13px;
+}
+.grid-item:nth-child(1){
+  background-color: #733FC8;
+  background-image: url(./images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-position-x: 52vw;
+  background-size: 32%;
+}
+.grid-item:nth-child(1) img{
+  border: 2px solid #A775F2;
+}
+.grid-item:nth-child(2){
+  background-color: hsl(217, 19%, 35%);
+}
+.grid-item:nth-child(3){
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(217, 19%, 35%);
+}
+.grid-item:nth-child(3) .card-content__info{
+  color: hsla(217, 19%, 35%, .7);
+}
+.grid-item:nth-child(4){
+  background-color: hsl(219, 29%, 14%);
+}
+.grid-item:nth-child(4) .header-card__img{
+  border: 2px solid #A775F2;
+}
+.grid-item:nth-child(5){
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(217, 19%, 35%);
+}
+.grid-item:nth-child(5) .card-content__info{
+  color: hsla(217, 19%, 35%, .7);
+}
+.grid-item:nth-child(5) .header-card__title--profile-status,
+.grid-item:nth-child(3) .header-card__title--profile-status{
+  color: hsla(217, 19%, 35%, .8);
+
+}
+
+@media screen and (min-width:400px){
+  .grid-item:nth-child(1){
+    background-position-x: 40vw;
+  }
+}
+@media screen and (min-width: 525px){
+.grid-item:nth-child(1) {
+    background-position-x: 30vw;
+}
+}
+@media screen and (min-width:768px){
+  body{
+    height: 100%;
+  }
+  .grid-container{
+    max-width: 90%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "Daniel-card Daniel-card Patrick-card Patrick-card"
+                         "John-card   John-card   Jean-card   Jean-card "
+                         "Kira-card   Kira-card   Kira-card   Kira-card";
+  }
+  .grid-item:nth-child(1){
+    grid-area: Daniel-card;
+    background-position-x: 23vw;
+  }
+  .grid-item:nth-child(2){
+    grid-area: John-card;
+  }
+  .grid-item:nth-child(3){
+    grid-area: Jean-card;
+  }
+  .grid-item:nth-child(4){
+    grid-area: Patrick-card;
+  }
+  .grid-item:nth-child(5){
+    grid-area: Kira-card;
+  }
+  .grid-item:nth-child(5) .header-card__img{
+    width: 10%;
+  }
+  .attribution{
+    margin: 20px auto 30px auto;
+  }
+
+}
+@media screen and (min-width:1024px){
+  body{
+    height: 100vh;
+  }
+  .grid-container{
+    margin: auto;
+    width: 90%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, minmax(50px, auto));
+    grid-template-areas: "Daniel-card Daniel-card John-card Kira-card"
+                         "Jean-card   Patrick-card   Patrick-card   Kira-card ";
+}
+.content-card__sub-title {
+  font-size: 19px;
+  line-height: 20px;
+}
+.header-card__title {
+  font-size: 11px;
+}
+.card-content__info{
+  line-height: 16px;
+  font-size: 13px;
+}
+.grid-item:nth-child(1){
+  background-position-x: 30vw;
+  background-size: 25%;
+}
+.grid-item:nth-child(1) .header-card__img{
+  width: 10%;
+}
+.grid-item:nth-child(2) .header-card__img{
+  width: 22%;
+}
+.grid-item:nth-child(3) .header-card__img{
+  width: 23%;
+}
+.grid-item:nth-child(4) .header-card__img{
+  width: 9%;
+}
+.grid-item:nth-child(5) .header-card__img{
+  width: 22%;
+}
+.attribution{
+  position: absolute;
+  bottom: 0vh;
+  
+}
+
+}
+@media screen and (min-width:1440px){
+  .grid-container{
+    width: 80%;
+    max-width: 1100px;
+}
+.content-card__sub-title {
+  line-height: 23px;
+}
+.header-card__title {
+  font-size: 13px;
+  line-height: 17px;
+}
+.card-content__info{
+  line-height: 18px;
+}
+.grid-item:nth-child(1){
+  background-position-x: 25vw;
+  background-size: 21%;
+}
+.grid-item:nth-child(1) .header-card__img{
+  width: 10%;
+}
+.grid-item:nth-child(2) .header-card__img{
+  width: 22%;
+}
+.grid-item:nth-child(3) .header-card__img{
+  width: 23%;
+}
+.grid-item:nth-child(4) .header-card__img{
+  width: 9%;
+}
+.grid-item:nth-child(5) .header-card__img{
+  width: 22%;
+}
+}
+@media screen and (min-width:1700px){
+  .grid-item:nth-child(1){
+    background-position-x: 19vw;
+  }
+}

@@ -80,17 +80,6 @@ body{
   line-height: 25px;
   padding: 20px 0px;
   font-weight: 600;
-  transition: all 500ms;
-  animation: scale 2s 1s alternate infinite;
-}
-@keyframes scale{
-  from{
-    transform: scale(1);
-    color: rgba(255, 255, 255, 0.35);
-  }
-  to{
-    transform: scale(1.01);
-  }
 }
 .card-content__info{
   color: hsla(0, 0%, 81%, .7);
